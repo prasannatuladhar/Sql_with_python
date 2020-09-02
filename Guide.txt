@@ -1,0 +1,40 @@
+What ever we have created in database will not be saved persistently.
+
+In order to save persistently-
+1) Use ".open FILENAME" to open and create a database
+Example 
+.open person_db.db
+2) sqlite3 person_db.db  /create a database person_db.db
+
+To Acesss 
+sqlite3 person_db.db
+.tables // To check tables in database
+
+
+To WRITE SQL query from other .sql file
+EXAMPLE
+.read filename.sql
+
+*******************************************************************************************************************
+1) CREATE  A TABLE IN DATABASE:
+EXAMPLE:
+CREATE TABLE person(
+name TEXT,
+age INTEGER,
+location TEXT
+);
+
+2)INSERT DATA IN TABLE
+Example:
+INSERT INTO person(name,location,age) VALUES ("ram","nepal",25) ;
+
+3) SELECTING DATA FROM TABLE
+Example:
+SELECT * FROM person ;   // * means every column
+SELECT name FROM person WHERE location="Australia ;
+SELECT name,age FROM person WHERE age>20 and location="Nepal";
+SELECT name FROM person WHERE name LIKE "%pra%" ;
+
+
+
+
